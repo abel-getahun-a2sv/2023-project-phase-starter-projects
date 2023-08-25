@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Page: React.FC = () => {
   const [search, setSearch] = useState('');
-  const { data: blogs, error, isLoading, isSuccess } = useGetBlogsQuery();
+  const { data: blogs, error, isLoading, isSuccess } = useGetBlogsQuery({});
 
   if (isLoading) {
     return <Loading />;
