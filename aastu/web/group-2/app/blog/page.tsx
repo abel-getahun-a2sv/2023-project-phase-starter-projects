@@ -41,7 +41,7 @@ const Page: React.FC = () => {
       {/* blog list */}
       <div className="flex flex-col gap-4 lg:px-52 md:px-40 px-8 mt-5">
         {blogs
-          ?.toSorted((a: Blog, b: Blog) => b?.createdAt?.localeCompare(a?.createdAt))
+          ?.toSorted((a: Blog, b: Blog) => (b?.createdAt || '').localeCompare(a?.createdAt || ''))
           ?.filter((blog: Blog) => {
             return (
               blog.title.toLowerCase().includes(search.toLowerCase()) ||
