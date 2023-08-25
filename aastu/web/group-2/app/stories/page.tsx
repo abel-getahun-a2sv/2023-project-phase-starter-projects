@@ -15,8 +15,7 @@ import type { Stories } from '@/lib/types';
 
 
 
-
-export function StoriesCard ({alternate, profileImage ,personName, imgURL, role, location, story}:Stories) {
+function StoriesCard ({alternate, profileImage ,personName, imgURL, role, location, story}:Stories) {
 
     return (
         <div className={`${alternate ? "md:flex-row" : "md:flex-row-reverse" } flex flex-col justify-between gap-8 items-center md:items-center md:px-12 lg:px-36  w-full mb-24`}>
