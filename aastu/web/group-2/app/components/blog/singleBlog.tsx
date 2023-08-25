@@ -54,9 +54,9 @@ const SingleBlog: React.FC<SingleBlogProps> = ({ id, image, authorName, title, t
     )}
 
     <div className='flex'>
-        {tags.map((tag: string) => {
+        {tags.map((tag: string, id: number) => {
             return (
-                <div className='bg-gray-200 rounded-full m-4 px-6 py-2 font-mont text-xs text-gray-600'>{tag}</div>
+                <div key={id} className='bg-gray-200 rounded-full m-4 px-6 py-2 font-mont text-xs text-gray-600'>{tag}</div>
             );
         })}
     </div>

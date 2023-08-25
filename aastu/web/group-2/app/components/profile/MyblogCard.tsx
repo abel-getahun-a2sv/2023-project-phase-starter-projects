@@ -40,7 +40,7 @@ const SingleBlogCard: React.FC<Blog> = ({
                     className='flex flex-wrap w-full items-start text-center'>
                     {tags.map((tag, i) => {
                         return (
-                            <p
+                            <p  key={i}
                                 className='block m-2 rounded-full py-1 px-3 bg-gray-100'>{tag}</p>
                         )
 

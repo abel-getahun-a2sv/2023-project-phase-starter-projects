@@ -72,8 +72,8 @@ const Section3 = ()=>{
         <div className="w-full flex justify-center mb-20">
             <div className="flex flex-wrap gap-4">   
                 {
-                    pages.map((page)=>(
-                        <span onClick={()=> updatePage(page) }className={`flex justify-center items-center h-10 w-10 font-bold font-primaryFont bg-slate-300 rounded-lg cursor-pointer ${page == currentNav && '!bg-blue-800 !text-white'}`}>{page}</span>
+                    pages.map((page, i)=>(
+                        <span key={i} onClick={()=> updatePage(page) }className={`flex justify-center items-center h-10 w-10 font-bold font-primaryFont bg-slate-300 rounded-lg cursor-pointer ${page == currentNav && '!bg-blue-800 !text-white'}`}>{page}</span>
                     ))
                 }
             </div>

@@ -34,7 +34,7 @@ export function StoriesCard ({alternate, profileImage ,personName, imgURL, role,
             <div className='w-5/6 md:w-3/5'>
             <div className='flex flex-col justify-around'>
                 {story?.map((item, index) => [
-                    <div className='mb-4'>
+                    <div className='mb-4' key={index}>
                         <p className='font-secondaryFont font-medium text-2xl mb-8'>{item.heading}</p>
                         <p className='font-secondaryFont font-light italic text-sm'>{item.paragraph}</p>
                     </div>

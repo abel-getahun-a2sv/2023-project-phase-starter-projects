@@ -39,8 +39,8 @@ const First = () => {
       <div className="text-3xl font-primaryFont text-center mt-20 mx-auto">{blogInfo?.title}</div>
       <div className="text-xs font-secondaryFont flex items-center justify-center font-light uppercase text-gray-500 h-5 m-3">
         {blogInfo?.tags
-          .map((tag) => {
-            return tag;
+          .map((tag: any, i:number) => {
+            return <p key={i}>{tag}</p>;
           })
           .join(', ')}
         &nbsp;&nbsp;|&nbsp;&nbsp;6 min read
